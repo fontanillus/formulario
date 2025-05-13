@@ -106,9 +106,10 @@ input[type="submit"] {
     border: 3px solid rgb(206, 17, 17);
     border-radius: 5px;
     position: absolute;
-    top: 109%;
+    top: 110%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
     background-color: transparent;
+    cursor: pointer;
 }
