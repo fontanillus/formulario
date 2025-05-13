@@ -36,7 +36,7 @@ margin-left: 16px;
 
 form {
     width: 50%;
-    height: 100vh;
+    height: 110vh;
     background: linear-gradient(rgba(246, 198, 224, 0.8));
     margin: 0 auto;
     border: none;
@@ -96,11 +96,14 @@ select {
 #unisex {
     border: 2px solid rgb(206, 17, 17);
 }
+input[type="submit"] {
+background-color: blue;
+}
 
 
 input[type="submit"] {
-    width: 7%;
-    height: 3em;
+    width: 15%;
+    height: 2em;
     font-size: 95%;
     color: rgb(206, 17, 17);
     border: 3px solid rgb(206, 17, 17);
@@ -112,4 +115,5 @@ input[type="submit"] {
     font-weight: bold;
     background-color: transparent;
     cursor: pointer;
+    position: relative;
 }
