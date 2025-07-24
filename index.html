@@ -5,73 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfumes</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 
 <body>
     <div id="container"></div>
-    <h1 id="titulo">Encuesta sobre perfumería</h1>
-    <p id="descripcion">¿Cuales son tus gustos sobre fraganias? Llena los placeholders con tu información</p>
+    <h1 id="titulo" class="titulo">Encuesta sobre perfumería</h1>
+    <p id="descripcion" class="descripcion">¿Cuáles son tus gustos sobre fragancias? Llena los placeholders con tu información</p>
     <form id="survey-form">
         <p>
             <label for="nombre" id="label_nombre" class="negrita">Nombre:</label>
-            <input id="nombre" name="nombre" type="text" placeholder="i.e. Yolanda Fontanillas" class=letra required maxlength="40"/>
+            <input id="nombre" name="nombre" type="text" placeholder="i.e. Yolanda Fontanillas" class="letra" required maxlength="40" />
         </p>
         <p>
             <label for="edad" id="label_edad" class="negrita">Edad (opcional):</label>
-            <input id="edad" name="edad" type="number" placeholder="58" class=letra required min="15" max="85" />
+            <input id="edad" name="edad" type="number" placeholder="58" class="letra" required min="15" max="85" />
         </p>
         <fieldset>
-            <label for="familia" id="label_familia" class=negrita>¿Cuál es tu familia olfativa preferida?</label>
-                <select id="label_familia" class=letra"required>
-                    <option value="1" checked>Cítrica o Hespéride</option>
-                    <option value="2">Floral</option>
-                    <option value="3">Amaderada</option>
-                    <option value="4">Fougère</option>
-                    <option value="5">Chipre</option>
-                    <option value="6">Gourmand</option>
-                </select>
+            <label for="familia" id="label_familia" class="negrita">¿Cuál es tu familia olfativa preferida?</label>
+            <select id="familia" name="familia" class="letra" required>
+                <option value="1" checked>Cítrica o Hespéride</option>
+                <option value="2">Floral</option>
+                <option value="3">Amaderada</option>
+                <option value="4">Fougère</option>
+                <option value="5">Chipre</option>
+                <option value="6">Gourmand</option>
+            </select>
         </fieldset>
         <fieldset>
-            <legend class="negrita">¿Que tipo de fragancias prefieres?</legend>
-            <label for="femenina" id="label_femenina"><input id="femenina" type="radio" name="tipo-fragancia" value="1"
-                    required>Femenina</label>
-            <label for="masculina" id="label_masculina"><input id="masculina" type="radio" name="tipo-fragancia"
-                    value="2" required>Masculina</label>
-            <label for="unisex" id="label_unisex"><input id="unisex" type="radio" name="tipo-fragancia" value="3"
-                    required checked>Unisex</label>
+            <legend class="negrita">¿Qué tipo de fragancias prefieres?</legend>
+            <label for="femenina" id="label_femenina"><input id="femenina" type="radio" name="tipo-fragancia" value="1" required>Femenina</label>
+            <label for="masculina" id="label_masculina"><input id="masculina" type="radio" name="tipo-fragancia" value="2" required>Masculina</label>
+            <label for="unisex" id="label_unisex"><input id="unisex" type="radio" name="tipo-fragancia" value="3" required checked>Unisex</label>
         </fieldset>
         <fieldset>
-                <legend class="negrita">¿Qué concentraciones utilizas habitualmente (selecciona todos los que quieras)
-                </legend>
-                <label for="ef" id="label_ef" class="negrita"><input id="ef" type="checkbox"
-                        name="tipo-concentación" value="1">Eau
-                    Fraîche (EF): 1-3%, duración corta,
-                    ideal para climas calidos.</label>
-                <label for="edc" id="label_edc" class="negrita"><input id="edc" type="checkbox"
-                        name="tipo-concentracion" value="2" checked>Eau de Cologne (EDC): 3-5%, duración
-                    moderada, ideal para el uso diario.</label>
-                <label for="edt" id="label_edt" class="negrita"><input id="edt" type="checkbox"
-                        name="tipo-concentracion" value="3" checked>Eau de Toilette (EDT): 4-8%, duración
-                    media, versátil para diferentes ocasiones.</label>
-                <label for="edp" id="label_edp" class="negrita"><input id="edp" type="checkbox"
-                        name="tipo-concentracion" value="4" checked>Eau de Parfum (EDP): 8-15%,
-                    duración prolongada, para la noche y eventos.</label>
-                <label for="parfum" id="label_parfum" class="negrita"><input id="parfum" type="checkbox"
-                        name="tipo-concentracion" value="5">Parfum (EDP): 15-30%, duración muy
-                    prolongada.</label>
+            <legend class="negrita">¿Qué concentraciones utilizas habitualmente (selecciona todos los que quieras)?</legend>
+            <label for="ef" id="label_ef" class="negrita"><input id="ef" type="checkbox" name="tipo-concentracion" value="1">Eau Fraîche (EF): 1-3%, duración corta, ideal para climas cálidos.</label>
+            <label for="edc" id="label_edc" class="negrita"><input id="edc" type="checkbox" name="tipo-concentracion" value="2" checked>Eau de Cologne (EDC): 3-5%, duración moderada, ideal para el uso diario.</label>
+            <label for="edt" id="label_edt" class="negrita"><input id="edt" type="checkbox" name="tipo-concentracion" value="3" checked>Eau de Toilette (EDT): 4-8%, duración media, versátil para diferentes ocasiones.</label>
+            <label for="edp" id="label_edp" class="negrita"><input id="edp" type="checkbox" name="tipo-concentracion" value="4" checked>Eau de Parfum (EDP): 8-15%, duración prolongada, para la noche y eventos.</label>
+            <label for="parfum" id="label_parfum" class="negrita"><input id="parfum" type="checkbox" name="tipo-concentracion" value="5">Parfum (EDP): 15-30%, duración muy prolongada.</label>
         </fieldset>
         <fieldset>
-            <label for="fragancias" id="label_fragancias" class="negrita">Nombra tres de tus perfumeres preferidos: </label>
-            <textarea id="fragancias" rows="1" cols="70"  class="letra" placeholder="i.e One (Calvin Kelvin), Kenzo Flower (Shiseido), Si (Giorgio Armani)"></textarea>
+            <label for="fragancias" id="label_fragancias" class="negrita">Nombra tres de tus perfumes preferidos:</label>
+            <textarea id="fragancias" rows="1" cols="70" class="letra" placeholder="i.e One (Calvin Kelvin), Kenzo Flower (Shiseido), Si (Giorgio Armani)"></textarea>
         </fieldset>
-    
+
         <label for="enviar" id="label_enviar">
-            <input id="enviar" type="submit" value="Enviar" class=letra required />
+            <input id="enviar" type="submit" value="Enviar" class="letra" required />
         </label>
-      
     </form>
-    </div>
 </body>
 
 </html>

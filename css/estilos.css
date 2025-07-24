@@ -1,15 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+/* Variables CSS */
+:root {
+    --color-principal: rgb(206, 17, 17);
+    --color-secundari: rgb(239, 138, 155);
+    --color-fons: rgb(246, 198, 224);
+    --color-fons-alt: rgb(237, 210, 215);
+    --font-size-base: 1rem;  /* base per al text */
+    --font-size-h1: 2rem;
+    --font-size-input: 0.95rem;
+    --font-family-primaria: Nunito, 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-secundaria: "Limelight", sans-serif;
+}
 
+/* Estils generals */
 body {
     width: 90%;
     background-image: url(../img/3.jpg);
-    height: 110vh;
-    font-family: Nunito, 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: var(--font-family-primaria);
     -webkit-user-select: none;
     user-select: none;
     margin: 0 auto;
     color: black;
-    font-size: larger;
+    font-size: var(--font-size-base);
 }
 
 #container {
@@ -19,31 +33,30 @@ body {
 }
 
 h1 {
-    font-family: "Limelight", sans-serif;
-    color: rgb(239, 138, 155);
+    font-family: var(--font-family-secundaria);
+    color: var(--color-secundari);
     text-align: center;
     text-shadow: whitesmoke 2px 2px;
+    font-size: var(--font-size-h1);
 }
 
 p {
-margin-left: 16px;
+    margin-left: 16px;
 }
 
 #descripcion {
-    color: rgb(237, 210, 215);
+    color: var(--color-fons-alt);
     text-align: center;
 }
 
+/* Form */
 form {
     width: 50%;
-    height: 110vh;
     background: linear-gradient(rgba(246, 198, 224, 0.8));
     margin: 0 auto;
     border: none;
     border-radius: 20px;
-    padding-bottom: 2em;
-    border-radius: 20px;
-    padding-top: 25px;
+    padding: 25px 20px 2em;
     display: block;
 }
 
@@ -54,10 +67,9 @@ label {
 }
 
 .letra {
-font-family: Nunito, 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
-font-size: 90%;
+    font-family: var(--font-family-primaria);
+    font-size: 90%;
 }
-
 
 fieldset {
     display: block;
@@ -65,55 +77,132 @@ fieldset {
     margin-bottom: 20px;
 }
 
-#nombre,
-#edad {
-    height: 1.5em;
-    border: 2px solid rgb(206, 17, 17);
-    margin-left: 1px;
-    width: 92.60%;
+/* Inputs, selects i textareas */
+#nombre, 
+#edad, 
+#fragancias, 
+select, 
+textarea {
+    border: 2px solid var(--color-principal);
+    width: 92.6%;
 }
 
-#fragancias  {
-border: 2px solid rgb(206, 17, 17);
-}
-
-
+/* Selecció */
 select {
-    width: 96%;
+    font-size: 16px;
     padding: 5px;
     background-color: white;
-    font-size: 16px;
-    border: 2px solid rgb(206, 17, 17);
 }
 
+/* Tipografia negreta */
 .negrita {
     font-weight: bold;
 }
 
-
-#femenina,
-#masculina,
+/* Radio buttons */
+#femenina, 
+#masculina, 
 #unisex {
-    border: 2px solid rgb(206, 17, 17);
-}
-input[type="submit"] {
-background-color: blue;
+    border: 2px solid var(--color-principal);
 }
 
-
+/* Botó d'enviament */
 input[type="submit"] {
     width: 15%;
     height: 2em;
-    font-size: 95%;
-    color: rgb(206, 17, 17);
-    border: 3px solid rgb(206, 17, 17);
+    font-size: var(--font-size-input);
+    color: var(--color-principal);
+    border: 3px solid var(--color-principal);
     border-radius: 5px;
-    position: absolute;
-    top: 110%;
-    left: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
     background-color: transparent;
     cursor: pointer;
     position: relative;
+    left: 50%;
+    top: 10px;
 }
+
+/* 📱 Mòbil (portrait) i tauleta (portrait) */
+@media screen and (max-width: 1024px) {
+    form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #nombre, 
+    #edad, 
+    select, 
+    textarea {
+        width: 100%;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+/* 📱 Mòbil (landscape) i tauleta (landscape) */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    form {
+        width: 90%;
+    }
+
+    input[type="submit"] {
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    body {
+        font-size: 15px;
+    }
+}
+
+/* 💻 Tauleta (portrait) */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    form {
+        width: 80%;
+    }
+
+    input[type="submit"] {
+        width: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* 💻 Tauleta (landscape) */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    form {
+        width: 70%;
+        padding: 30px;
+    }
+
+    input[type="submit"] {
+        width: 30%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
